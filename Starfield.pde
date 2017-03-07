@@ -99,7 +99,7 @@ class JumboParticle extends NormalParticle//uses inheritance
 public void show()
 {
   fill(66, 244, 152);
-  rect((float)x,(float)y,100,100);
+  rect((float)x,(float)y,75,75);
 }
 }
 
