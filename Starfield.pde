@@ -81,16 +81,27 @@ class OddballParticle implements Particle//uses an interface
   public void show()
   {
   noStroke();
-  fill(237, 0, 138);
+  fill(0);
   rect((float)x,(float)y,45,45);
   }
   
   public void move()
   {
-  a = (int)(Math.random()*5)-2;
-  b = (int)(Math.random()*5)-2;
+  a = (int)(Math.random()*6)-2;
+  b = (int)(Math.random()*4)-2;
   x = x+a;
   y = y+b;
+   if(x>501 || y>501)
+  {
+    x=250;
+    y=250;
+  }
+  else 
+  if (x<0 || y<0) 
+  {
+    x=250;
+    y=250;  
+  }
   }  
 }
 
@@ -99,7 +110,7 @@ class JumboParticle extends NormalParticle//uses inheritance
 public void show()
 {
   fill(66, 244, 152);
-  rect((float)x,(float)y,75,75);
+  ellipse((float)x,(float)y,75,75);
 }
 }
 
