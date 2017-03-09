@@ -14,7 +14,8 @@ for (int i = 0; i<normal.length; i++)
 
 void draw()
 {
-background(66, 134, 244);
+fill(0, 0, 0, 33);
+rect(0, 0, 500, 500);
 for (int i = 0; i <normal.length; i++)
 {
   normal[i].move();
@@ -43,14 +44,14 @@ class NormalParticle implements Particle
   y = y - b;
   if(x>501 || y>501)
   {
-    x=250;
-    y=250;
+    x = 250;
+    y = 250;
   }
   else 
   if (x<0 || y<0) 
   {
-    x=250;
-    y=250;  
+    x = 250;
+    y = 250;  
   }
   }
   
@@ -73,15 +74,15 @@ class OddballParticle implements Particle//uses an interface
   int col,x,y,z,a,b;
   OddballParticle()
   {
-  x = 250;
-  y = 250;
+  x = (int)(Math.random() *499);
+  y = (int)(Math.random() *499);
   col = color((int)(Math.random()*5)+250,(int)(Math.random()*5)+250,(int)(Math.random()*5)+250);
   }
   
   public void show()
   {
   noStroke();
-  fill(0);
+  fill(66, 144, 234);
   rect((float)x,(float)y,45,45);
   }
   
