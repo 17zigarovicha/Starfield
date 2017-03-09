@@ -114,4 +114,3 @@ public void show()
   ellipse((float)x,(float)y,75,75);
 }
 }
-
